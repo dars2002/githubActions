@@ -1,0 +1,14 @@
+name: hola-mundo
+on: [push] #Evento que activará el Workflow
+jobs:
+  Saludando:
+    runs-on: ubuntu-latest
+    steps: #Inicio de steps
+      - name: Checkout repository
+      - uses: actions/checkout@v3
+      - name: Instalando python
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Corriendo script
+      -  run: python holamundo.py
